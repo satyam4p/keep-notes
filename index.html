@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:400,500&display=swap"></link>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="backdrop">
+        <div class="modal"> 
+            <form id="modal-form">
+            <div class="modal-content"></div>
+            <div class="modal-toolbar">
+                <i class="fa fa-trash modal-deleteBtn" aria-hidden="true"></i>
+                <i class="fas fa-palette color-palette-icon">
+                    <div class="color-palette">
+                        <div class="colors-container">
+                            <div class="solid-color" style="background-color:rgba(92, 128, 196, 0.589);"></div>
+                            <div class="solid-color" style="background-color:rgba(50, 228, 59, 0.575);"></div>
+                            <div class="solid-color" style="background-color:rgba(247, 73, 73, 0.589);"></div>
+                            <div class="solid-color" style="background-color:rgba(121, 149, 201, 0.288);"></div>
+                            <div class="solid-color" style="background-color:rgba(221, 85, 31, 0.562);"></div>
+                            <div class="solid-color" style="background-color:rgba(174, 49, 212, 0.568);"></div>
+                            <div class="solid-color" style="background-color:rgba(26, 157, 161, 0.664);"></div>
+                            <div class="solid-color" style="background-color:rgba(230, 202, 44, 0.678);"></div>
+                            <div class="solid-color" style="background-color:rgba(30, 209, 7, 0.562);"></div>
+                        </div>
+                    </div>
+                </i>
+            </div>
+            <button type="submit" class="modal-closeBtn">Close</button>
+        </form>
+        </div>
+    </div>
+    <div id="container">
+        <header>
+            <h1>Keep Notes</h1>
+        </header>
+        <div class="content">
+            <div class="form-modal">
+                <form id="form">
+                        <input id="note_title" type="text" autocomplete="off" placeholder="Title"/>
+                        <span class="text_input">
+                        <textarea id="note_text" onInput="this.parentNode.dataset.replicatedValue = this.value" class="note_text" autocomplete="off" type="text" placeholder="Take a note..."></textarea>
+                        </span>
+                        <div class="form_button">
+                        <button id="addBtn" type="submit">Add</button>
+                        <button id="cancelBtn" type="button">Close</button>
+                        </div>
+                </form>
+            </div>
+            <div id="notes" class="notes-list">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
